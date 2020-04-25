@@ -3,7 +3,7 @@
 Required dependencies: python-captcha, opencv, python-tensorflow (CPU or GPU)
 
 
-## Generating captchas
+## Generating captchas:
 
 ```
 ./generate.py --width 128 --height 64 --length 4 --symbols symbols.txt --count 3200 --scramble --output-dir test
@@ -28,7 +28,7 @@ has no way to check if the answer from the CNN for some captcha is right or
 wrong! Make sure not to use the `--scramble` option when generating the
 training or validation datasets.
 
-### Generating Identical Sequences
+### Generating Identical Sequences:
 
 Using the `--seed` argument to the generator script, you can pass an arbitrary
 string that will be used as a random seed for captcha generation. This can be
@@ -41,7 +41,7 @@ because a given captcha text can be rendered in many different ways. However
 the same sequence of captcha text samples will be produced.
 
 
-## Training the neural network
+## Training the neural network:
 
 ```
 ./train.py --width 128 --height 64 --length 4 --symbols symbols.txt --batch-size 4 --epochs 2 --output-model test.h5 --train-dataset training_data --validate-dataset validation_data
@@ -53,7 +53,7 @@ pass through the full dataset.
 The suggested training dataset size for the initial training for captcha length of 4 symbols
 is 20000 images, with a validation dataset size of 4000 images.
 
-## Running the classifier
+## Running the classifier:
 
 ```
 ./classify.py  --model-name test --captcha-dir ~/Downloads/validation_data/ --output ~/Downloads/stuff.txt --symbols symbols.txt
