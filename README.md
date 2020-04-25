@@ -1,4 +1,4 @@
-# CNN Based Captcha Breaker Project
+## The main idea behind the project are described below:
 
 Required dependencies: python-captcha, opencv, python-tensorflow (CPU or GPU)
 
